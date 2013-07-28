@@ -1,0 +1,211 @@
+/* 
+    Author: daniel kuenkel
+    Description: 
+    Purpose of the stylesheet follows.
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body
+{
+
+    text-align: center;
+    font-family: "Century Gothic";
+    background-image: url("../img/welcome-ground-pattern.jpg");
+}
+
+label {
+    display: inline-block;
+    width: 10em;
+}
+
+/*
+.tooltip {
+    display:none;
+    background:transparent url(http://flowplayer.org/tools/img/tooltip/black_arrow.png);
+    font-size:12px;
+    height:70px;
+    width:160px;
+    padding:25px;
+    color:#fff;
+}*/
+
+#map-content {
+    height: auto !important; /* ie6 ignores !important, so this will be overridden below */
+    min-height: 100%; /* ie6 ignores min-height completely */
+    height: 100%;
+    width: 100%;
+}
+
+
+
+#navigationBar
+{
+    height: 50px;
+    width: 100%;
+    clear: both;
+}
+
+#mapsPanel {
+    margin-top: 2px;
+    padding-left: 30px;
+    float: left;
+}
+
+#navButtons {
+    margin-top: 2px;
+    float: right;
+    padding-right: 30px;
+}
+
+
+
+#searchButton {
+    display: inline-table;
+
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    background-repeat: no-repeat;
+    background-image: url("../img/button-loupe-normal.png");
+}
+#searchButton:hover {
+    background-image: url("../img/button-loupe-hover.png");
+}
+
+
+#logoutButton {
+    width: 37px;
+    height: 36px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    background-repeat: no-repeat;
+    background-image: url("../img/button-logout-normal.png");
+}
+#logoutButton:hover {
+    background-image: url("../img/button-logout-hover.png");
+}
+
+#helpButton {
+    width: 36px;
+    height: 36px;
+    margin-right: 10px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    background-repeat: no-repeat;
+    background-image: url("../img/button-help-normal.png");
+}
+#helpButton:hover {
+    background-image: url("../img/button-help-hover.png");
+}
+
+#trackLocationButton {
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 37px;
+    height: 36px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    background-repeat: no-repeat;
+    background-image: url("../img/button-track-location-normal.png");
+}
+#trackLocationButton:hover {
+    background-image: url("../img/button-track-location-hover.png");
+}
+
+#currentLocationButton {
+    width: 28px;
+    height: 36px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    background-repeat: no-repeat;
+    background-image: url("../img/button-current-location-normal.png");
+}
+#currentLocationButton:hover {
+    background-image: url("../img/button-current-location-hover.png");
+}
+
+
+.inputField {
+    font-weight: bold;
+    text-align: left;
+    float: left;
+    clear: both;
+    background: none;
+    text-decoration: none;
+    border: none;
+    outline: 0;
+    text-shadow: 0px 0px 3px rgba(255,255,255,0.3);
+}
+
+#address:focus {
+
+    color: gainsboro;
+}
+
+.inputField:focus {
+    text-shadow: 2px 2px 0px rgba(0,0,0,0.4);
+}
+
+#address {
+    width: 240px;
+    margin-top: 11px;
+    font-size: 16pt;
+}
+
+.toggleButton {
+    margin-left: 10px;
+}
+
+#toggleRadiusButton {
+    margin-left: 30px;
+    width: 114px;
+    height: 36px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    background-repeat: no-repeat;
+    background-image: url("../img/button-radius-big.png");
+}
+#toggleRadiusButton.sel {
+    background-image: url("../img/button-radius-small.png");
+}
+
+#toggleOpacityButton {
+    margin-left: 10px;
+    width: 123px;
+    height: 36px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    background-repeat: no-repeat;
+    background-image: url("../img/button-alpha-big.png");
+}
+#toggleOpacityButton.sel {
+    background-image: url("../img/button-alpha-small.png");
+}
+
+/* google maps */
+#map-canvas{
+    top: 50px; 
+    position: absolute;
+    bottom: 0; 
+    left: 0;
+    width: 100%; 
+
+
+
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0,0,0,1.0);
+    -moz-box-shadow: 0px 0px 10px rgba(0,0,0,1.0); /* Mozilla Firefox */
+    -webkit-box-shadow: 0px 0px 10px rgba(0,0,0,1.0) ; /* Google Chrome */
+}

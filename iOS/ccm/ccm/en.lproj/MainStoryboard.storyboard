@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="ndP-Oe-G2J">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="wdb-bI-0v5">
+            <objects>
+                <navigationController definesPresentationContext="YES" navigationBarHidden="YES" id="ndP-Oe-G2J" sceneMemberID="viewController">
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="oPa-7m-JKf">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="2" kind="relationship" relationship="rootViewController" id="VCP-sK-nmt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fsv-9h-a3e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="190" y="-174"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Default@2x.png" translatesAutoresizingMaskIntoConstraints="NO" id="hYf-z4-G4A"/>
+                            <button autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bIG-HG-I4l">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" backgroundImage="sign-in-button.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected">
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onSignInTap:" destination="2" eventType="touchUpInside" id="LFK-bt-qtL"/>
+                                </connections>
+                            </button>
+                            <button autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lTx-zY-tOh">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" backgroundImage="sign-up-button.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected">
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onSignUpTap:" destination="2" eventType="touchUpInside" id="dFY-dK-I8R"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="input-fields.png" translatesAutoresizingMaskIntoConstraints="NO" id="q5X-Q1-iTy"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TdG-A7-sr4">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="uoI-L0-8Ui"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="2" id="lSr-wb-X2J"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LIF-yK-4hD">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="ccs-i1-QSj"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="send" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="2" id="Wa1-hH-0tp"/>
+                                </connections>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="seperator.png" translatesAutoresizingMaskIntoConstraints="NO" id="xLI-kl-Gdw"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" image="seperator.png" translatesAutoresizingMaskIntoConstraints="NO" id="RML-aR-NBl"/>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="hYf-z4-G4A" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="29Z-da-1DN"/>
+                            <constraint firstItem="RML-aR-NBl" firstAttribute="centerX" secondItem="LIF-yK-4hD" secondAttribute="centerX" type="default" id="9QP-d7-xmd"/>
+                            <constraint firstItem="hYf-z4-G4A" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="HQ3-uw-YqM"/>
+                            <constraint firstItem="hYf-z4-G4A" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="I0j-Hb-kgf"/>
+                            <constraint firstItem="lTx-zY-tOh" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="MIu-QA-eTR"/>
+                            <constraint firstItem="RML-aR-NBl" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="RvR-hk-miz"/>
+                            <constraint firstItem="LIF-yK-4hD" firstAttribute="top" secondItem="3" secondAttribute="top" constant="133" id="Tsr-CH-aFT"/>
+                            <constraint firstItem="TdG-A7-sr4" firstAttribute="leading" secondItem="q5X-Q1-iTy" secondAttribute="leading" type="default" id="YWV-YD-ElA"/>
+                            <constraint firstItem="TdG-A7-sr4" firstAttribute="trailing" secondItem="q5X-Q1-iTy" secondAttribute="trailing" type="default" id="Yjh-77-u2r"/>
+                            <constraint firstItem="q5X-Q1-iTy" firstAttribute="top" secondItem="3" secondAttribute="top" constant="91" id="bxL-L9-ju5"/>
+                            <constraint firstItem="LIF-yK-4hD" firstAttribute="leading" secondItem="TdG-A7-sr4" secondAttribute="leading" type="default" id="cNF-sh-bFe"/>
+                            <constraint firstItem="lTx-zY-tOh" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="ca6-UP-jbl"/>
+                            <constraint firstItem="xLI-kl-Gdw" firstAttribute="top" secondItem="3" secondAttribute="top" constant="75" id="dVl-wH-hRA"/>
+                            <constraint firstItem="TdG-A7-sr4" firstAttribute="trailing" secondItem="LIF-yK-4hD" secondAttribute="trailing" type="default" id="fWS-rb-Qbr"/>
+                            <constraint firstItem="hYf-z4-G4A" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="gcb-Sc-i9g"/>
+                            <constraint firstItem="xLI-kl-Gdw" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="iYx-qA-X2C"/>
+                            <constraint firstItem="RML-aR-NBl" firstAttribute="top" secondItem="3" secondAttribute="top" constant="166" id="kgc-Ss-d68"/>
+                            <constraint firstItem="bIG-HG-I4l" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="rdO-mK-uDJ"/>
+                            <constraint firstItem="TdG-A7-sr4" firstAttribute="top" secondItem="3" secondAttribute="top" constant="96" id="sOv-78-bFz"/>
+                            <constraint firstItem="bIG-HG-I4l" firstAttribute="top" secondItem="3" secondAttribute="top" constant="178" id="xDW-38-Cm4"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="ueo-1x-W4u" appends="YES" id="12w-GI-wOt"/>
+                            <outletCollection property="gestureRecognizers" destination="FDl-8k-5LF" appends="YES" id="DCb-i7-tGh"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" id="X5J-tc-QY6"/>
+                    <connections>
+                        <outlet property="inputBackground" destination="q5X-Q1-iTy" id="4vP-WX-V0z"/>
+                        <outlet property="password" destination="LIF-yK-4hD" id="iwT-wE-dKZ"/>
+                        <outlet property="seperatorBottom" destination="RML-aR-NBl" id="7LY-VE-rgt"/>
+                        <outlet property="seperatorTop" destination="xLI-kl-Gdw" id="r1J-op-RpG"/>
+                        <outlet property="signInButton" destination="bIG-HG-I4l" id="ibI-mS-L6t"/>
+                        <outlet property="signUpButton" destination="lTx-zY-tOh" id="cE4-ze-grO"/>
+                        <outlet property="username" destination="TdG-A7-sr4" id="sf9-GM-jb9"/>
+                        <segue destination="fBb-1f-dNX" kind="modal" identifier="LoggedInSeque" modalTransitionStyle="flipHorizontal" id="Db4-BG-kiW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="down" id="ueo-1x-W4u">
+                    <connections>
+                        <action selector="handeSwipeDown:" destination="2" id="azI-Fl-48h"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="up" id="FDl-8k-5LF">
+                    <connections>
+                        <action selector="handleSwipeUp:" destination="2" id="OcZ-s7-b7D"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="724" y="-174"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="AX1-2x-ej6">
+            <objects>
+                <viewController id="50Z-W3-FUJ" customClass="MapViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vgg-63-2mz">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JPP-1H-sh4">
+                                <connections>
+                                    <outlet property="delegate" destination="50Z-W3-FUJ" id="7gY-80-AXy"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JPP-1H-sh4" firstAttribute="bottom" secondItem="Vgg-63-2mz" secondAttribute="bottom" type="default" id="3kd-kk-ads"/>
+                            <constraint firstItem="JPP-1H-sh4" firstAttribute="leading" secondItem="Vgg-63-2mz" secondAttribute="leading" type="default" id="Fdg-wR-uwC"/>
+                            <constraint firstItem="JPP-1H-sh4" firstAttribute="trailing" secondItem="Vgg-63-2mz" secondAttribute="trailing" type="default" id="VVm-f1-NU1"/>
+                            <constraint firstItem="JPP-1H-sh4" firstAttribute="top" secondItem="Vgg-63-2mz" secondAttribute="top" type="default" id="n6A-G8-0zm"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="g0a-e5-9b2">
+                        <nil key="title"/>
+                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="refresh" id="bl1-uY-zlS">
+                            <connections>
+                                <action selector="onLocateTap:" destination="50Z-W3-FUJ" id="2d4-0o-VCg"/>
+                            </connections>
+                        </barButtonItem>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="cc8-Fg-T9n">
+                            <rect key="frame" x="47" y="6" width="227" height="33"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="Standard"/>
+                                <segment title="Satellite"/>
+                                <segment title="Hybrid"/>
+                            </segments>
+                            <connections>
+                                <action selector="mapTypeChanged:" destination="50Z-W3-FUJ" eventType="valueChanged" id="oph-yP-dUX"/>
+                            </connections>
+                        </segmentedControl>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="fbY-wP-Iil">
+                            <connections>
+                                <action selector="onTrackTap:" destination="50Z-W3-FUJ" id="iPz-5R-1Jr"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="mapStyleSegment" destination="cc8-Fg-T9n" id="IAm-9Z-Rqc"/>
+                        <outlet property="mapView" destination="JPP-1H-sh4" id="gNE-i9-NZa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="djB-SP-aL6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1689" y="-174"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="hDl-ki-hDp">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="fBb-1f-dNX" sceneMemberID="viewController">
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackOpaque" id="ZbG-2y-fUu">
+                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Yhc-ln-Ime">
+                        <rect key="frame" x="0.0" y="436" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="50Z-W3-FUJ" kind="relationship" relationship="rootViewController" id="Roy-fv-ZU5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XGS-fC-MRE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1237" y="-174"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Default@2x.png" width="640" height="920"/>
+        <image name="input-fields.png" width="277" height="76"/>
+        <image name="seperator.png" width="320" height="2"/>
+        <image name="sign-in-button.png" width="281" height="45"/>
+        <image name="sign-up-button.png" width="281" height="45"/>
+    </resources>
+    <classes>
+        <class className="MapViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MapViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="mapTypeChanged:"/>
+                <relationship kind="action" name="onLocateTap:"/>
+                <relationship kind="action" name="onTrackTap:"/>
+                <relationship kind="outlet" name="mapStyleSegment" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="handeSwipeDown:"/>
+                <relationship kind="action" name="handleSwipeUp:"/>
+                <relationship kind="action" name="onSignInTap:"/>
+                <relationship kind="action" name="onSignUpTap:"/>
+                <relationship kind="outlet" name="inputBackground" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="password" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="seperatorBottom" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="seperatorTop" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="signInButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="signUpButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="username" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>

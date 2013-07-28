@@ -1,0 +1,162 @@
+/* 
+    Author: daniel kuenkel
+    Description: 
+    Purpose of the stylesheet follows.
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body
+{
+    text-align: center;
+    font-family: "Century Gothic";
+    background-image: url("../img/welcome-ground-pattern.jpg");
+}
+
+#content {
+    position: absolute;
+    width: 802px;
+    height: 580px;
+    
+    margin: -290px 0 0 -401px;
+    left: 50%;
+    top: 50%;
+}
+
+#logo {
+    display: inline-block;
+    width: 293px;
+    height: 213px;
+    background-image: url("../img/welcome-logo.png");
+    background-repeat: no-repeat;
+}
+
+#seperator {
+    width: 802px;
+    height: 4px;
+    background-image: url("../img/welcome-seperator.png");
+    background-repeat: no-repeat;
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+#loginRegisterForm {
+    display: inline-block;
+    width: 452px;
+}
+
+#seperatorTop {
+    display: inline-block;
+    width: 452px;
+    height: 4px;
+    background-image: url("../img/welcome-seperator-small.png");
+    background-repeat: no-repeat;
+}
+
+#seperatorBottom {
+    display: inline-block;
+    width: 452px;
+    height: 4px;
+    background-image: url("../img/welcome-seperator-small.png");
+    background-repeat: no-repeat;
+}
+
+.smallSeperator {
+    display: inline-block;
+    width: 452px;
+    height: 4px;
+    background-image: url("../img/welcome-seperator-small.png");
+    background-repeat: no-repeat;
+}
+
+
+.welcomeButton {
+    display: inline-block;
+    cursor: pointer;
+    background: none;
+    border: none;
+    width: 290px;
+    height: 50px;
+    background-repeat: no-repeat;
+}
+
+#registerButton {
+    background-image: url("../img/button-sign-up-normal.png");
+}
+#registerButton:hover {
+    background-image: url("../img/button-sign-up-hover.png");
+}
+
+
+#loginButton {
+    margin-top: 10px;
+    background-image: url("../img/button-sign-in-normal.png");
+}
+#loginButton:hover {
+    background-image: url("../img/button-sign-in-hover.png");
+}
+
+
+#loginInputFields {
+    display: inline-block;
+    width: 283px;
+    height: 62px;
+    margin-top: 13px;
+    margin-bottom: 2px;
+    background-image: url("../img/welcome-input-ground.png");
+    background-repeat: no-repeat;
+}
+
+#form {
+    display: table;
+    margin: 0 auto;
+    width: 270px;
+}
+
+.inputField {
+    text-align: center;
+    width: 100%;
+    float: left;
+    clear: both;
+    background: none;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    text-shadow: 1px 1px 0px rgba(255,255,255,0.3);
+}
+#loginUser {
+    font-size: 13pt;
+    text-transform: uppercase; 
+    margin-top: 6px;
+    color: #372827;
+}
+#loginPassword {
+    font-size: 14pt;
+    margin-top: 8px;
+    color: #473431;
+}
+#loginPassword:focus, #loginUser:focus {
+    color: gainsboro;
+}
+
+.inputField:focus {
+    outline: 0;
+    text-shadow: 2px 2px 0px rgba(0,0,0,0.4);
+}
+
+#moreInformationButton {
+    margin-top: 8px;
+    width: 290px;
+    height: 52px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    background-repeat: no-repeat;
+    background-image: url("../img/button-about-normal.png");
+}
+#moreInformationButton:hover {
+    background-image: url("../img/button-about-hover.png");
+}
